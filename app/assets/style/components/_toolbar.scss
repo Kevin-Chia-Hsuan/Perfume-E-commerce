@@ -1,0 +1,21 @@
+.toolbar {
+    background-color: $primary;
+    @include pad {
+        display: none;
+    }
+    a {
+        position: relative;
+        display: block;
+        font-size: $h4-font-size;
+        line-height: 24px;
+        color: $success;
+        text-decoration: none;
+        &:hover {
+            font-weight: bolder;/*滑到a連結，字體加粗*/
+            color: $light;
+        }
+        @include pad {
+            display: none;
+        }
+    }
+}

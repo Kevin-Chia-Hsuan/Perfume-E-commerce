@@ -1,0 +1,52 @@
+---
+title: 登入頁
+layout: ./app/layout.ejs
+engine: ejs
+current: login
+---
+<section>
+    <div class="container-fluid toolbar mb-3">
+        <div class="container p-0">
+            <ul class="d-flex mb-0">
+                <li><a class="p-1" href="#">CHANEL</a></li>
+                <li><a class="p-1" href="#">Jo Malone</a></li>
+                <li><a class="p-1" href="#">Curology</a></li>
+                <li><a class="p-1" href="#">Dior</a></li>
+                <li><a class="p-1" href="#">Chloe</a></li>
+                <li><a class="p-1" href="#">ZARA</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row d-flex align-items-center my-3 my-lg-5">
+            <div class="col-lg-8">
+                <img src="https://raw.githubusercontent.com/Kevin-Chia-Hsuan/Hexschool-web-layout-training/main/week6/images/login1.jpg"
+                    class="img-fluid">
+            </div>
+            <div class="col-lg-4">
+                <h2 class="my-1">Log in</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">帳號</label>
+                        <input type="email" class="form-control form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">密碼</label>
+                        <input type="password" class="form-control form-control" id="exampleInputPassword1"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group d-flex align-items-center mt-2">
+                        <a href="#" class="mr-auto font-weight-bold">忘記密碼</a>
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-outline-primary">註冊</button>
+                            <button type="submit" class="btn btn-primary">登入</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

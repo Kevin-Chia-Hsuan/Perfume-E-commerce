@@ -1,0 +1,41 @@
+.footer {
+    background-color: $primary;
+    .copyright {
+        font-size: $h6-font-size;
+        line-height: 16px;
+        color: $success;
+    }
+    .menu {
+        a {
+            position: relative;
+            display: block;
+            font-size: $h4-font-size;
+            line-height: 24px;
+            color: $success;
+            text-decoration: none;
+            &:hover {
+                font-weight: bolder;/*滑到a連結，字體加粗*/
+                color: $light;
+            }
+
+            /*製作滑到a連結後，出現底線的動畫*/
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;/*由50%的地方往0呈現*/
+                right: 50%;/*由50%的地方往0呈現*/
+                bottom: 8px;
+                height: 0;
+                border-bottom: 2px solid $light;
+                transition: .5s;/*0.5秒內動畫呈現完畢*/
+            }
+            &:hover:after{
+                left: 0;/*由50%的地方往0呈現*/
+                right: 0;/*由50%的地方往0呈現*/
+            }
+            @include pad {
+                display: none;
+            }
+        }
+    }
+}

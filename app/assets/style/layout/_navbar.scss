@@ -1,0 +1,93 @@
+/* LOGO */
+.logo {
+    a {
+        display: block;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png);
+        @include background-type;
+        background-size: cover;
+        @include size(128px,38px);
+    }
+}
+/* PAD以上menu區塊 */
+.menu {
+    a {
+        position: relative;
+        display: block;
+        font-size: $h3-font-size;
+        line-height: 24px;
+        color: $secondary;
+        text-decoration: none;
+        &:hover {
+            font-weight: bolder;/*滑到a連結，字體加粗*/
+            color: $primary;
+        }
+
+        /*製作滑到a連結後，出現底線的動畫*/
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;/*由50%的地方往0呈現*/
+            right: 50%;/*由50%的地方往0呈現*/
+            bottom: 5px;
+            height: 0;
+            border-bottom: 2px solid $primary;
+            transition: .5s;/*0.5秒內動畫呈現完畢*/
+        }
+        &:hover:after{
+            left: 0;/*由50%的地方往0呈現*/
+            right: 0;/*由50%的地方往0呈現*/
+        }
+        span {
+            vertical-align: middle;
+        }
+        @include pad {
+            display: none;
+        }
+    }
+}
+/* PAD以下，menu區塊 */
+.md-menu {
+    display: none;
+    @include pad {
+        display: flex;
+        align-items: center;
+    }
+    a {
+        color: $secondary;
+        span {
+            vertical-align: middle;
+        }
+    }
+}
+/* PAD以下，menu選單 */
+.nav-menu {
+    height: 0px;
+    background-color: $secondary;
+    @include pad {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1.5s;
+        position: absolute;
+        z-index: 100;
+        top: 70px;
+        left: 0;
+        right: 0;
+    }
+    a {
+        display: none;
+        @include pad {
+        display: block;
+        font-size: $h5-font-size;
+        line-height: 24px;
+        text-align: center;
+        color: $light;
+        }
+    }
+}
+/* PAD以下，顯示menu選單 */
+.menu-show .nav-menu {
+    @include pad {
+        height: auto;
+        max-height: 400px;
+    }
+}
