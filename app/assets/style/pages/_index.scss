@@ -1,7 +1,7 @@
 .banner {
-  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg);
+  background-image: url(../images/perfume-banner.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   height: 870px;
   @include pad {
     background-position: 20% 10%;
@@ -127,7 +127,7 @@
   }
 }
 .subscribe {
-  background-image: url(https://raw.githubusercontent.com/Kevin-Chia-Hsuan/Hexschool-web-layout-training/main/week6/images/index10.jpg);
+  background-image: url(../images/index09.jpg);
   background-size: cover;
   background-position: center center;
   height: 600px;
