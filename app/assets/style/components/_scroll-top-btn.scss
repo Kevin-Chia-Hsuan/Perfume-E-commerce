@@ -6,8 +6,9 @@
   align-items: center; /*^圖示置中*/
   width: 40px;
   height: 40px;
-  right: 30px;
-  bottom: 100px;
+  right: 20px;
+  bottom: 80px;
+  border: solid 2px $light;
   border-radius: 50px;
   background-color: $primary;
   &:hover {
